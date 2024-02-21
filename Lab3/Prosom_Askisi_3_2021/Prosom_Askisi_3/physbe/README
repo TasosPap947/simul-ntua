@@ -1,0 +1,22 @@
+PHYSBE is a classic model of the human circulatory system. The specifications 
+for the model were first published by John McLeod in 1966 in an article titled, 
+"PHYSBE...a physiological simulation benchmark experiment". PHYSBE models blood 
+flow as a transport mechanism, and can be used to simulate the flow of oxygen, 
+nutrients, heat, or chemical tracers within the bloodstream. It is also a good 
+example of a non-linear continuous system. 
+
+To open the model (and the graphical user interface), just type "physbe" at 
+the MATLAB command prompt. 
+
+The PHYSBE demo has been built using Simulink v3.0. It will not function with
+earlier versions of Simulink. The MathWorks web site contains a 
+PHYSBE Web page which describe the entire system in detail. 
+
+The PHYSBE page contains images of all block diagrams, a listing of all 
+parameters, and a reference section with several related web sites and journal 
+articles. Goto http://www.mathworks.com/physbe.
+
+    Requires Simulink 3.0 or higher
+
+    Kevin Kohrt
+    kkohrt@mathworks.com

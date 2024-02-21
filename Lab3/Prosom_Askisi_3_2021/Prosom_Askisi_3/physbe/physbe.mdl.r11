@@ -1,0 +1,7734 @@
+Model {
+  Name			  "physbe"
+  Version		  3.00
+  SimParamPage		  "Solver"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  ShowPortDataTypes	  off
+  StartTime		  "0.0"
+  StopTime		  "20"
+  SolverMode		  "SingleTasking"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "1/10"
+  InitialStep		  "auto"
+  FixedStep		  "1/1000"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  on
+  MaxRows		  "1000"
+  Decimation		  "10"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "warning"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  off
+  StatusBar		  off
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  PreLoadFcn		  "pctrl2"
+  CloseFcn		  "close(findobj(allchild(0),'flat','name','PHYSBE Con"
+"trol Center'))"
+  Created		  "Thu Jun 24 09:04:12 1999"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "vlyons"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Jun 24 11:47:29 1999"
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "physbe"
+    Location		    [10, 44, 484, 415]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Analysis\nSubsystem"
+      Ports		      [0, 0, 0, 0, 0]
+      Position		      [372, 304, 466, 339]
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      FontWeight	      "bold"
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('Analysis\\nSubsystem')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Analysis\nSubsystem"
+	Location		[328, 162, 859, 499]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Reference
+	  Name			  "1/C1"
+	  Ports			  [0, 1, 0, 0, 0]
+	  Position		  [140, 41, 190, 59]
+	  SourceBlock		  "simulink3/Sources/Repeating\nSequence"
+	  SourceType		  "Repeating table"
+	  rep_seq_t		  "Cr(1,:)"
+	  rep_seq_y		  "Cr(2,:)"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "1/C3"
+	  Ports			  [0, 1, 0, 0, 0]
+	  Position		  [320, 41, 370, 59]
+	  SourceBlock		  "simulink3/Sources/Repeating\nSequence"
+	  SourceType		  "Repeating table"
+	  rep_seq_t		  "Cl(1,:)"
+	  rep_seq_y		  "Cl(2,:)"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Floating\nScope"
+	  Ports			  [0, 0, 0, 0, 0]
+	  Position		  [425, 120, 455, 150]
+	  Floating		  on
+	  Location		  [188, 357, 512, 596]
+	  Open			  on
+	  NumInputPorts		  "1"
+	  TickLabels		  "on"
+	  ZoomMode		  "on"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  Grid			  "on"
+	  TimeRange		  "10"
+	  YMin			  "0"
+	  YMax			  "225"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData"
+	  DataFormat		  "Matrix"
+	  LimitMaxRows		  on
+	  MaxRows		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP1"
+	  Position		  [210, 198, 235, 212]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  FontName		  "Geneva"
+	  FontSize		  9
+	  GotoTag		  "P1"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP1i"
+	  Position		  [370, 203, 400, 217]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P1i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP2i"
+	  Position		  [335, 213, 365, 227]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P2i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP2o"
+	  Position		  [175, 208, 205, 222]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  FontName		  "Geneva"
+	  FontSize		  9
+	  GotoTag		  "P2o"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP3"
+	  Position		  [210, 218, 235, 232]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  FontName		  "Geneva"
+	  FontSize		  9
+	  GotoTag		  "P3"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP3i"
+	  Position		  [370, 223, 400, 237]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P3i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP4"
+	  Position		  [175, 228, 205, 242]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  FontName		  "Geneva"
+	  FontSize		  9
+	  GotoTag		  "P4"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP4i"
+	  Position		  [335, 233, 365, 247]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P4"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP5"
+	  Position		  [210, 238, 235, 252]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  FontName		  "Geneva"
+	  FontSize		  9
+	  GotoTag		  "P5"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP5i"
+	  Position		  [370, 243, 400, 257]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P5i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP6"
+	  Position		  [175, 248, 205, 262]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  FontName		  "Geneva"
+	  FontSize		  9
+	  GotoTag		  "P6"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP6i"
+	  Position		  [335, 253, 365, 267]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P6i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP7"
+	  Position		  [210, 258, 235, 272]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  FontName		  "Geneva"
+	  FontSize		  9
+	  GotoTag		  "P7"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP7i"
+	  Position		  [370, 263, 400, 277]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P7i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP8"
+	  Position		  [175, 268, 205, 282]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  FontName		  "Geneva"
+	  FontSize		  9
+	  GotoTag		  "P8"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP8i"
+	  Position		  [335, 273, 365, 287]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P8i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP9"
+	  Position		  [210, 278, 235, 292]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  FontName		  "Geneva"
+	  FontSize		  9
+	  GotoTag		  "P9"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nP9i"
+	  Position		  [370, 283, 400, 297]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P9"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nV1"
+	  Position		  [55, 188, 80, 202]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V1"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nV10"
+	  Position		  [15, 278, 50, 292]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V2o"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nV3"
+	  Position		  [55, 208, 80, 222]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V3"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nV4"
+	  Position		  [15, 218, 50, 232]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V4"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nV5"
+	  Position		  [55, 228, 80, 242]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V5"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nV6"
+	  Position		  [15, 238, 50, 252]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V6"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nV7"
+	  Position		  [55, 248, 80, 262]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V7"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nV8"
+	  Position		  [15, 258, 50, 272]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V8"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nV9"
+	  Position		  [55, 268, 80, 282]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V9"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From sub2"
+	  Position		  [125, 138, 150, 152]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P3"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From sub3"
+	  Position		  [125, 118, 150, 132]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P1"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "FromV1"
+	  Position		  [265, 118, 290, 132]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V1"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "FromV2"
+	  Position		  [15, 198, 50, 212]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V2i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "FromV3"
+	  Position		  [265, 138, 290, 152]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "V3"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Heart\nPressure"
+	  Ports			  [1, 0, 0, 0, 0]
+	  Position		  [190, 120, 220, 150]
+	  Floating		  off
+	  Location		  [188, 357, 512, 596]
+	  Open			  on
+	  NumInputPorts		  "1"
+	  TickLabels		  "on"
+	  ZoomMode		  "on"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  Grid			  "on"
+	  TimeRange		  "10"
+	  YMin			  "0"
+	  YMax			  "225"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData"
+	  DataFormat		  "Matrix"
+	  LimitMaxRows		  on
+	  MaxRows		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Heart\nVolume"
+	  Ports			  [1, 0, 0, 0, 0]
+	  Position		  [325, 120, 355, 150]
+	  Floating		  off
+	  Location		  [188, 357, 512, 596]
+	  Open			  on
+	  NumInputPorts		  "1"
+	  TickLabels		  "on"
+	  ZoomMode		  "on"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  Grid			  "on"
+	  TimeRange		  "10"
+	  YMin			  "0"
+	  YMax			  "450"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData"
+	  DataFormat		  "Matrix"
+	  LimitMaxRows		  on
+	  MaxRows		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Heart Beat\nLeft Ventricle"
+	  Position		  [400, 40, 465, 60]
+	  ForegroundColor	  "green"
+	  NamePlacement		  "alternate"
+	  GotoTag		  "LHeart"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Heart Beat\nRight Ventricle"
+	  Position		  [220, 40, 285, 60]
+	  ForegroundColor	  "green"
+	  NamePlacement		  "alternate"
+	  GotoTag		  "RHeart"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [305, 114, 310, 156]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [170, 113, 175, 157]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux6"
+	  Ports			  [10, 1, 0, 0, 0]
+	  Position		  [100, 188, 105, 292]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "10"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux7"
+	  Ports			  [9, 1, 0, 0, 0]
+	  Position		  [255, 189, 260, 301]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "9"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux8"
+	  Ports			  [9, 1, 0, 0, 0]
+	  Position		  [420, 194, 425, 306]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "9"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "Pressure"
+	  Position		  [275, 230, 320, 260]
+	  NamePlacement		  "alternate"
+	  VariableName		  "pressure"
+	  Buffer		  "1000"
+	  Decimation		  "10"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "Pressure in"
+	  Position		  [455, 235, 500, 265]
+	  NamePlacement		  "alternate"
+	  VariableName		  "pin"
+	  Buffer		  "1000"
+	  Decimation		  "10"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "Volume"
+	  Position		  [120, 225, 160, 255]
+	  NamePlacement		  "alternate"
+	  VariableName		  "volume"
+	  Buffer		  "1000"
+	  Decimation		  "10"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Line {
+	  SrcBlock		  "Mux8"
+	  SrcPort		  1
+	  DstBlock		  "Pressure in"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From\nP7i"
+	  SrcPort		  1
+	  DstBlock		  "Mux8"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "From\nP5i"
+	  SrcPort		  1
+	  DstBlock		  "Mux8"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "From\nP3i"
+	  SrcPort		  1
+	  DstBlock		  "Mux8"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "From\nP1i"
+	  SrcPort		  1
+	  DstBlock		  "Mux8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From\nP9i"
+	  SrcPort		  1
+	  DstBlock		  "Mux8"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "From\nP7"
+	  SrcPort		  1
+	  DstBlock		  "Mux7"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "From\nP3"
+	  SrcPort		  1
+	  DstBlock		  "Mux7"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "From\nP5"
+	  SrcPort		  1
+	  DstBlock		  "Mux7"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "From\nP9"
+	  SrcPort		  1
+	  DstBlock		  "Mux7"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "Mux7"
+	  SrcPort		  1
+	  DstBlock		  "Pressure"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From\nP1"
+	  SrcPort		  1
+	  DstBlock		  "Mux7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From\nV10"
+	  SrcPort		  1
+	  DstBlock		  "Mux6"
+	  DstPort		  10
+	}
+	Line {
+	  SrcBlock		  "FromV2"
+	  SrcPort		  1
+	  DstBlock		  "Mux6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From\nV6"
+	  SrcPort		  1
+	  DstBlock		  "Mux6"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "From\nV4"
+	  SrcPort		  1
+	  DstBlock		  "Mux6"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "From\nV5"
+	  SrcPort		  1
+	  DstBlock		  "Mux6"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "From\nV3"
+	  SrcPort		  1
+	  DstBlock		  "Mux6"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "From\nV7"
+	  SrcPort		  1
+	  DstBlock		  "Mux6"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "From\nV8"
+	  SrcPort		  1
+	  DstBlock		  "Mux6"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "Mux6"
+	  SrcPort		  1
+	  DstBlock		  "Volume"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From\nV9"
+	  SrcPort		  1
+	  DstBlock		  "Mux6"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "From\nV1"
+	  SrcPort		  1
+	  DstBlock		  "Mux6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From\nP2o"
+	  SrcPort		  1
+	  DstBlock		  "Mux7"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From\nP6"
+	  SrcPort		  1
+	  DstBlock		  "Mux7"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "From\nP8"
+	  SrcPort		  1
+	  DstBlock		  "Mux7"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "From\nP4"
+	  SrcPort		  1
+	  DstBlock		  "Mux7"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "From\nP8i"
+	  SrcPort		  1
+	  DstBlock		  "Mux8"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "From\nP6i"
+	  SrcPort		  1
+	  DstBlock		  "Mux8"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "From\nP4i"
+	  SrcPort		  1
+	  DstBlock		  "Mux8"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "From\nP2i"
+	  SrcPort		  1
+	  DstBlock		  "Mux8"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From sub3"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FromV1"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "Heart\nVolume"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From sub2"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "Heart\nPressure"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FromV3"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "1/C3"
+	  SrcPort		  1
+	  DstBlock		  "Heart Beat\nLeft Ventricle"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "1/C1"
+	  SrcPort		  1
+	  DstBlock		  "Heart Beat\nRight Ventricle"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [59, 42]
+	  Text			  "Control\nand\n Analysis "
+	  DropShadow		  on
+	  FontSize		  18
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Aorta"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [410, 169, 450, 231]
+      ForegroundColor	      "red"
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('AORTA')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		1
+	Name			"<P4, t4>"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Aorta"
+	Location		[19, 44, 591, 459]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "in"
+	  Position		  [40, 205, 60, 225]
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F3o, t3o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(F4i--F5i--F6i--F7i--F8i)"
+	  Ports			  [5, 1, 0, 0, 0]
+	  Position		  [180, 69, 195, 161]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "----+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(F5i+F6+F7+F8i)"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [150, 307, 165, 383]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++++"
+	  SaturateOnIntegerOverflow on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "÷ Fi"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "(F5i+F6i+F7i+F8i) x t4o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [200, 338, 210, 367]
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "f4o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(f4i--f4o+f4e)"
+	  Ports			  [3, 1, 0, 0, 0]
+	  Position		  [245, 181, 260, 389]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add\nIC3"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [265, 105, 280, 145]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "V4"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add\nIC4"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [325, 277, 340, 308]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "h4"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "F4 & t4"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [470, 227, 475, 278]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<P4, t4>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "F4i & t4i"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [130, 194, 135, 236]
+	  ForegroundColor	  "blue"
+	  BackgroundColor	  "blue"
+	  ShowName		  off
+	  Outputs		  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F4i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "t4i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F4i x t4i"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [175, 193, 185, 237]
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f4i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nArms"
+	  Position		  [75, 368, 110, 382]
+	  ForegroundColor	  "red"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "F5i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F5i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nHead"
+	  Position		  [30, 348, 65, 362]
+	  ForegroundColor	  "red"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "F6i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F6i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nLegs"
+	  Position		  [75, 308, 110, 322]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "F8i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F8i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nTrunk"
+	  Position		  [30, 328, 65, 342]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "F7i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F7i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From  Arms"
+	  Position		  [90, 128, 125, 142]
+	  ForegroundColor	  "red"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "F5i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F5i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From  Head"
+	  Position		  [35, 108, 70, 122]
+	  ForegroundColor	  "red"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "F6i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F6i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From  Legs"
+	  Position		  [90, 68, 125, 82]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "F8i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F8i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From  Trunk"
+	  Position		  [35, 88, 70, 102]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "F7i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F7i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nLeft Heart"
+	  Position		  [520, 115, 550, 135]
+	  ForegroundColor	  "blue"
+	  GotoTag		  "P4"
+	  TagVisibility		  "scoped"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  Position		  [340, 160, 370, 180]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  GotoTag		  "V4"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:V4"
+	  Position		  [215, 128, 250, 142]
+	  Value			  "V0(4)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:h4"
+	  Position		  [275, 293, 310, 307]
+	  Value			  "h0(4)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate3"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [215, 108, 250, 122]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate5"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [275, 279, 310, 291]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "V4/C4"
+	  Position		  [345, 108, 385, 142]
+	  NamePlacement		  "alternate"
+	  Gain			  "1/C(4)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "P4"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "_1_\n V4"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [330, 220, 350, 250]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Operator		  "reciprocal"
+	  OutputSignalType	  "auto"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "1/V4"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "f4e"
+	  Position		  [165, 277, 200, 293]
+	  BackgroundColor	  "orange"
+	  Value			  "fe(4)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "f4e"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "h4\n------\nV4"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [395, 207, 410, 323]
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "t4"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out"
+	  Position		  [530, 245, 550, 265]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Integrate5"
+	  SrcPort		  1
+	  DstBlock		  "Add\nIC4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IC:h4"
+	  SrcPort		  1
+	  DstBlock		  "Add\nIC4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Integrate3"
+	  SrcPort		  1
+	  DstBlock		  "Add\nIC3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IC:V4"
+	  SrcPort		  1
+	  DstBlock		  "Add\nIC3"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "<P4, t4>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "F4 & t4"
+	  SrcPort		  1
+	  DstBlock		  "out"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F7i"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "From  Trunk"
+	  SrcPort		  1
+	  DstBlock		  "(F4i--F5i--F6i--F7i--F8i)"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "F6i"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "From  Head"
+	  SrcPort		  1
+	  DstBlock		  "(F4i--F5i--F6i--F7i--F8i)"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "<F3o, t3o>"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "in"
+	  SrcPort		  1
+	  DstBlock		  "F4i & t4i"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F7i"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "From\nTrunk"
+	  SrcPort		  1
+	  DstBlock		  "(F5i+F6+F7+F8i)"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "F6i"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "From\nHead"
+	  SrcPort		  1
+	  DstBlock		  "(F5i+F6+F7+F8i)"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "F8i"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "From\nLegs"
+	  SrcPort		  1
+	  DstBlock		  "(F5i+F6+F7+F8i)"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F5i"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "From\nArms"
+	  SrcPort		  1
+	  DstBlock		  "(F5i+F6+F7+F8i)"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "÷ Fi"
+	  Labels		  [1, 0]
+	  SrcBlock		  "(F5i+F6+F7+F8i)"
+	  SrcPort		  1
+	  DstBlock		  "(F5i+F6i+F7i+F8i) x t4o"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f4i"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "F4i x t4i"
+	  SrcPort		  1
+	  DstBlock		  "(f4i--f4o+f4e)"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F4i"
+	  SrcBlock		  "F4i & t4i"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 1]
+	    DstBlock		    "F4i x t4i"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [0, -50]
+	    DstBlock		    "(F4i--F5i--F6i--F7i--F8i)"
+	    DstPort		    5
+	  }
+	}
+	Line {
+	  Name			  "t4i"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "F4i & t4i"
+	  SrcPort		  2
+	  DstBlock		  "F4i x t4i"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "f4e"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "f4e"
+	  SrcPort		  1
+	  DstBlock		  "(f4i--f4o+f4e)"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "F8i"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "From  Legs"
+	  SrcPort		  1
+	  DstBlock		  "(F4i--F5i--F6i--F7i--F8i)"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F5i"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "From  Arms"
+	  SrcPort		  1
+	  DstBlock		  "(F4i--F5i--F6i--F7i--F8i)"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "P4"
+	  Labels		  [0, 0]
+	  SrcBlock		  "V4/C4"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "Goto\nLeft Heart"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [2, 1]
+	    Points		    [0, 115]
+	    DstBlock		    "F4 & t4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "V4"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Add\nIC3"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "V4/C4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 45]
+	    Branch {
+	      Labels		      [-1, 0]
+	      Points		      [0, 65]
+	      DstBlock		      "_1_\n V4"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [-1, 0]
+	      DstBlock		      "Goto1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  Name			  "h4"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Add\nIC4"
+	  SrcPort		  1
+	  DstBlock		  "h4\n------\nV4"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "1/V4"
+	  Labels		  [0, 0]
+	  SrcBlock		  "_1_\n V4"
+	  SrcPort		  1
+	  DstBlock		  "h4\n------\nV4"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "t4"
+	  Labels		  [0, 0]
+	  SrcBlock		  "h4\n------\nV4"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [0, 140; -250, 0]
+	    DstBlock		    "(F5i+F6i+F7i+F8i) x t4o"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "F4 & t4"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "(f4i--f4o+f4e)"
+	  SrcPort		  1
+	  DstBlock		  "Integrate5"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f4o"
+	  Labels		  [0, 0]
+	  SrcBlock		  "(F5i+F6i+F7i+F8i) x t4o"
+	  SrcPort		  1
+	  DstBlock		  "(f4i--f4o+f4e)"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "(F4i--F5i--F6i--F7i--F8i)"
+	  SrcPort		  1
+	  DstBlock		  "Integrate3"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [390, 388]
+	  Text			  "Temperature\n(K)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [393, 171]
+	  Text			  "Volume\n(ml)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [48, 24]
+	  ForegroundColor	  "blue"
+	  Text			  "Connect to\nLeft Heart"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [503, 24]
+	  ForegroundColor	  "red"
+	  Text			  "Connect to\nSystemic System"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [182, 263]
+	  Text			  "From External \nHeat Sources"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [438, 101]
+	  Text			  "Blood\nPressure\n(mmHg)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [365, 323]
+	  Text			  "Total\nHeat\n(cal)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [310, 103]
+	  Text			  "Blood\n Volume\n(ml)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [291, 22]
+	  Text			  " Aorta "
+	  DropShadow		  on
+	  FontName		  "Bookman Old Style"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Arms"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [365, 122, 405, 158]
+      Orientation	      "left"
+      ForegroundColor	      "blue"
+      BackgroundColor	      "orange"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('ARMS')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		1
+	Name			"<F5o, f5o>"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Arms"
+	Location		[8, 44, 621, 445]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "in1"
+	  Position		  [15, 232, 30, 248]
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<P4, t4>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(F6i--F6o)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [210, 110, 220, 150]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(P6i--P6)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [100, 100, 110, 140]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(f6i--f6o+f6e--f6d)1"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [270, 231, 285, 324]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++--"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(t6--ta)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [370, 315, 380, 355]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add \nIC2"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [350, 251, 360, 289]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "h5"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add \nIC3"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [280, 100, 290, 140]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "V5"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Ambient Temp\n(deg K)"
+	  Position		  [415, 335, 435, 355]
+	  Orientation		  "left"
+	  BackgroundColor	  "orange"
+	  Value			  "ta"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ta"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F6i x t6i"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [220, 222, 230, 253]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f5i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "F6o & f6o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [530, 180, 535, 255]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F5o, f5o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F6o x t6"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [490, 216, 500, 254]
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f5o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nVena Cava"
+	  Position		  [565, 55, 595, 75]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P9"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P5o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nAorta"
+	  Position		  [130, 222, 160, 238]
+	  Orientation		  "left"
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  GotoTag		  "F5i"
+	  TagVisibility		  "scoped"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto3"
+	  Position		  [325, 165, 355, 185]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "V5"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto4"
+	  Position		  [395, 165, 425, 185]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "P5"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto5"
+	  Position		  [100, 221, 130, 239]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "P5i"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:V50"
+	  Position		  [235, 102, 265, 118]
+	  NamePlacement		  "alternate"
+	  Value			  "V0(5)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:h50"
+	  Position		  [300, 252, 335, 268]
+	  NamePlacement		  "alternate"
+	  Value			  "h0(5)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate3"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [235, 122, 265, 138]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate4"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [300, 272, 335, 288]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "KA(t5--ta)"
+	  Position		  [300, 315, 350, 355]
+	  Orientation		  "left"
+	  Gain			  "K*A(5)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f5d"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P5--P5o\n-------------\nR5o"
+	  Position		  [425, 90, 470, 130]
+	  Gain			  "1/Ro(5)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F5o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P5i--P5\n-------------\nR5i"
+	  Position		  [125, 100, 170, 140]
+	  Gain			  "1/Ri(5)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F5i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "P6--P6o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [400, 90, 410, 130]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "P6i & t6i"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [75, 221, 80, 254]
+	  ForegroundColor	  "blue"
+	  BackgroundColor	  "blue"
+	  ShowName		  off
+	  Outputs		  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P5i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "t5i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "V5/C5"
+	  Position		  [320, 100, 365, 140]
+	  NamePlacement		  "alternate"
+	  Gain			  "1/C(5)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "P5"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "f6e"
+	  Position		  [195, 257, 230, 273]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  Value			  "fe(5)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "h5/W5"
+	  Position		  [415, 249, 460, 291]
+	  Gain			  "1/W(5)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "t5"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out1"
+	  Position		  [590, 212, 605, 228]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  Name			  "P5i"
+	  SrcBlock		  "P6i & t6i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Goto5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "(P6i--P6)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "t5"
+	  SrcBlock		  "h5/W5"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [0, 55]
+	    DstBlock		    "(t6--ta)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "F6o x t6"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "ta"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Ambient Temp\n(deg K)"
+	  SrcPort		  1
+	  DstBlock		  "(t6--ta)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(t6--ta)"
+	  SrcPort		  1
+	  DstBlock		  "KA(t5--ta)"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f5d"
+	  Labels		  [0, 1; -1, 0]
+	  SrcBlock		  "KA(t5--ta)"
+	  SrcPort		  1
+	  Points		  [-70, 0; 0, -20]
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "F5o"
+	  Labels		  [0, 0]
+	  SrcBlock		  "P5--P5o\n-------------\nR5o"
+	  SrcPort		  1
+	  Points		  [0, 90]
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "F6o x t6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "F6o & f6o"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [3, 0]
+	    Points		    [-290, 0; 0, -60]
+	    DstBlock		    "(F6i--F6o)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "P6--P6o"
+	  SrcPort		  1
+	  DstBlock		  "P5--P5o\n-------------\nR5o"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "P5o"
+	  Labels		  [0, 1; 3, 1]
+	  SrcBlock		  "From\nVena Cava"
+	  SrcPort		  1
+	  Points		  [-180, 0; 0, 35]
+	  DstBlock		  "P6--P6o"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "P5"
+	  Labels		  [0, 0]
+	  SrcBlock		  "V5/C5"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "P6--P6o"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -55]
+	    Branch {
+	      Labels		      [-1, 1]
+	      Points		      [-285, 0]
+	      DstBlock		      "(P6i--P6)"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [2, 1]
+	      Points		      [0, 110]
+	      DstBlock		      "Goto4"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  Name			  "V5"
+	  SrcBlock		  "Add \nIC3"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "V5/C5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [2, 1]
+	    Points		    [0, 55]
+	    DstBlock		    "Goto3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrate3"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IC:V50"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f5o"
+	  SrcBlock		  "F6o x t6"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "F6o & f6o"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [0, 155; -300, 0; 0, -100]
+	    DstBlock		    "(f6i--f6o+f6e--f6d)1"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  Name			  "<F5o, f5o>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "F6o & f6o"
+	  SrcPort		  1
+	  DstBlock		  "out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IC:h50"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrate4"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC2"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "h5"
+	  Labels		  [1, 1]
+	  SrcBlock		  "Add \nIC2"
+	  SrcPort		  1
+	  DstBlock		  "h5/W5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "f6e"
+	  SrcPort		  1
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "f5i"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "F6i x t6i"
+	  SrcPort		  1
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "(f6i--f6o+f6e--f6d)1"
+	  SrcPort		  1
+	  DstBlock		  "Integrate4"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "t5i"
+	  Labels		  [0, 0; -1, 1]
+	  SrcBlock		  "P6i & t6i"
+	  SrcPort		  2
+	  DstBlock		  "F6i x t6i"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(P6i--P6)"
+	  SrcPort		  1
+	  DstBlock		  "P5i--P5\n-------------\nR5i"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F5i"
+	  SrcBlock		  "P5i--P5\n-------------\nR5i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "(F6i--F6o)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 110]
+	    Branch {
+	      DstBlock		      "Goto\nAorta"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [-1, 1]
+	      DstBlock		      "F6i x t6i"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "(F6i--F6o)"
+	  SrcPort		  1
+	  DstBlock		  "Integrate3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<P4, t4>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "in1"
+	  SrcPort		  1
+	  DstBlock		  "P6i & t6i"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [147, 278]
+	  Text			  "From External \nHeat Sources"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [254, 177]
+	  Text			  " Blood Volume\n(ml)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [286, 58]
+	  Text			  "Blood Pressure (mmHg)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [384, 247]
+	  Text			  "Total\nHeat\n (cal)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [474, 342]
+	  Text			  "Temp\n(K)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [563, 24]
+	  ForegroundColor	  "red"
+	  Text			  "Connect to\nVena Cava"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [316, 22]
+	  Text			  " Arms "
+	  DropShadow		  on
+	  FontName		  "Bookman Old Style"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [43, 24]
+	  ForegroundColor	  "blue"
+	  Text			  "Connect to\nAorta"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      GotoTagVisibility
+      Name		      "Goto Tag Visibility13"
+      Position		      [426, 24, 459, 37]
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      GotoTag		      "F6i"
+    }
+    Block {
+      BlockType		      GotoTagVisibility
+      Name		      "Goto Tag Visibility2"
+      Position		      [346, 39, 379, 52]
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      GotoTag		      "P2i"
+    }
+    Block {
+      BlockType		      GotoTagVisibility
+      Name		      "Goto Tag Visibility26"
+      Position		      [386, 54, 419, 67]
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      GotoTag		      "F5i"
+    }
+    Block {
+      BlockType		      GotoTagVisibility
+      Name		      "Goto Tag Visibility3"
+      Position		      [346, 54, 379, 67]
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      GotoTag		      "F3i"
+    }
+    Block {
+      BlockType		      GotoTagVisibility
+      Name		      "Goto Tag Visibility4"
+      Position		      [346, 24, 379, 37]
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      GotoTag		      "F1i"
+    }
+    Block {
+      BlockType		      GotoTagVisibility
+      Name		      "Goto Tag Visibility5"
+      Position		      [386, 24, 419, 37]
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      GotoTag		      "P4"
+    }
+    Block {
+      BlockType		      GotoTagVisibility
+      Name		      "Goto Tag Visibility6"
+      Position		      [386, 39, 419, 52]
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      GotoTag		      "P9"
+    }
+    Block {
+      BlockType		      GotoTagVisibility
+      Name		      "Goto Tag Visibility7"
+      Position		      [426, 39, 459, 52]
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      GotoTag		      "F7i"
+    }
+    Block {
+      BlockType		      GotoTagVisibility
+      Name		      "Goto Tag Visibility8"
+      Position		      [426, 54, 459, 67]
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      GotoTag		      "F8i"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Head"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [210, 91, 250, 129]
+      Orientation	      "left"
+      ForegroundColor	      "blue"
+      BackgroundColor	      "orange"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('HEAD')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		1
+	Name			"<F6o, f6o>"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Head"
+	Location		[8, 44, 617, 452]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "in"
+	  Position		  [15, 232, 30, 248]
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<P4, t4>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(F6i--F6o)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [210, 110, 220, 150]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(P6i--P6)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [100, 100, 110, 140]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(f6i--f6o+f6e--f6d)1"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [270, 231, 285, 324]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++--"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(t6--ta)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [370, 315, 380, 355]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add \nIC"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [350, 251, 360, 289]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "h6"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add \nIC3"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [280, 100, 290, 140]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "V6"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Ambient Temp\n(deg K)"
+	  Position		  [415, 335, 435, 355]
+	  Orientation		  "left"
+	  BackgroundColor	  "orange"
+	  Value			  "ta"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ta"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F6i x t6i"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [220, 222, 230, 253]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f6i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "F6o & f6o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [530, 180, 535, 255]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F6o, f6o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F6o x t6"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [490, 216, 500, 254]
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f6o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nVena Cava"
+	  Position		  [565, 55, 595, 75]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P9"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P6o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nAorta"
+	  Position		  [130, 222, 160, 238]
+	  Orientation		  "left"
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  GotoTag		  "F6i"
+	  TagVisibility		  "scoped"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nP6i"
+	  Position		  [100, 221, 130, 239]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "P6i"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  Position		  [325, 165, 355, 185]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "V6"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto2"
+	  Position		  [395, 165, 425, 185]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "P6"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:V60"
+	  Position		  [235, 102, 265, 118]
+	  NamePlacement		  "alternate"
+	  Value			  "V0(6)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:h60"
+	  Position		  [300, 252, 335, 268]
+	  NamePlacement		  "alternate"
+	  Value			  "h0(6)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate1"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [235, 122, 265, 138]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate2"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [300, 272, 335, 288]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "KA(t6--ta)"
+	  Position		  [300, 315, 350, 355]
+	  Orientation		  "left"
+	  Gain			  "K*A(6)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f6d"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "P6--P6o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [400, 90, 410, 130]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P6--P6o\n-------------\nR6o"
+	  Position		  [425, 90, 470, 130]
+	  Gain			  "1/Ro(6)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F6o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "P6i & t6i"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [75, 220, 80, 255]
+	  ForegroundColor	  "blue"
+	  BackgroundColor	  "blue"
+	  ShowName		  off
+	  Outputs		  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P6i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "t6i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P6i--P6\n-------------\nR6i"
+	  Position		  [125, 100, 170, 140]
+	  Gain			  "1/Ri(6)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F6i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "V6/C6"
+	  Position		  [320, 100, 365, 140]
+	  NamePlacement		  "alternate"
+	  Gain			  "1/C(6)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "P6"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "f6e"
+	  Position		  [195, 257, 230, 273]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  Value			  "fe(6)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "h6/W6"
+	  Position		  [415, 249, 460, 291]
+	  Gain			  "1/W(6)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "t6"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out"
+	  Position		  [590, 212, 605, 228]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  Name			  "P6i"
+	  SrcBlock		  "P6i & t6i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Goto\nP6i"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "(P6i--P6)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "t6"
+	  SrcBlock		  "h6/W6"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [0, 55]
+	    DstBlock		    "(t6--ta)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "F6o x t6"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "ta"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Ambient Temp\n(deg K)"
+	  SrcPort		  1
+	  DstBlock		  "(t6--ta)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(t6--ta)"
+	  SrcPort		  1
+	  DstBlock		  "KA(t6--ta)"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f6d"
+	  Labels		  [0, 1; -1, 0]
+	  SrcBlock		  "KA(t6--ta)"
+	  SrcPort		  1
+	  Points		  [-70, 0; 0, -20]
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "F6o"
+	  Labels		  [0, 0]
+	  SrcBlock		  "P6--P6o\n-------------\nR6o"
+	  SrcPort		  1
+	  Points		  [0, 90]
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "F6o x t6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "F6o & f6o"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [3, 0]
+	    Points		    [-290, 0; 0, -60]
+	    DstBlock		    "(F6i--F6o)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "P6--P6o"
+	  SrcPort		  1
+	  DstBlock		  "P6--P6o\n-------------\nR6o"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "P6o"
+	  Labels		  [0, 1; 3, 1]
+	  SrcBlock		  "From\nVena Cava"
+	  SrcPort		  1
+	  Points		  [-180, 0; 0, 35]
+	  DstBlock		  "P6--P6o"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "P6"
+	  Labels		  [0, 0]
+	  SrcBlock		  "V6/C6"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "P6--P6o"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -55]
+	    Branch {
+	      Labels		      [-1, 1]
+	      Points		      [-285, 0]
+	      DstBlock		      "(P6i--P6)"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [2, 1]
+	      Points		      [0, 110]
+	      DstBlock		      "Goto2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  Name			  "V6"
+	  SrcBlock		  "Add \nIC3"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "V6/C6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [2, 1]
+	    Points		    [0, 55]
+	    DstBlock		    "Goto1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "f6o"
+	  SrcBlock		  "F6o x t6"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "F6o & f6o"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [0, 160; -300, 0; 0, -105]
+	    DstBlock		    "(f6i--f6o+f6e--f6d)1"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  Name			  "<F6o, f6o>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "F6o & f6o"
+	  SrcPort		  1
+	  DstBlock		  "out"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IC:h60"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrate2"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "h6"
+	  Labels		  [1, 1]
+	  SrcBlock		  "Add \nIC"
+	  SrcPort		  1
+	  DstBlock		  "h6/W6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "f6e"
+	  SrcPort		  1
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "f6i"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "F6i x t6i"
+	  SrcPort		  1
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "(f6i--f6o+f6e--f6d)1"
+	  SrcPort		  1
+	  DstBlock		  "Integrate2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "t6i"
+	  Labels		  [0, 0; -1, 1]
+	  SrcBlock		  "P6i & t6i"
+	  SrcPort		  2
+	  DstBlock		  "F6i x t6i"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "<P4, t4>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "in"
+	  SrcPort		  1
+	  DstBlock		  "P6i & t6i"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "(P6i--P6)"
+	  SrcPort		  1
+	  DstBlock		  "P6i--P6\n-------------\nR6i"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F6i"
+	  SrcBlock		  "P6i--P6\n-------------\nR6i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "(F6i--F6o)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 110]
+	    Branch {
+	      DstBlock		      "Goto\nAorta"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [-1, 1]
+	      DstBlock		      "F6i x t6i"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrate1"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(F6i--F6o)"
+	  SrcPort		  1
+	  DstBlock		  "Integrate1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IC:V60"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC3"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [563, 24]
+	  ForegroundColor	  "red"
+	  Text			  "Connect to\nVena Cava"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [147, 278]
+	  Text			  "From External \nHeat Sources"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [316, 22]
+	  Text			  " Head "
+	  DropShadow		  on
+	  FontName		  "Bookman Old Style"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [254, 177]
+	  Text			  " Blood Volume\n(ml)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [286, 58]
+	  Text			  "Blood Pressure (mmHg)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [384, 247]
+	  Text			  "Total\nHeat\n (cal)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [474, 342]
+	  Text			  "Temp\n(K)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [48, 24]
+	  ForegroundColor	  "blue"
+	  Text			  "Connect to\nAorta"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Left\nHeart"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [320, 182, 355, 218]
+      ForegroundColor	      "red"
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      ShowPortLabels	      on
+      MaskDisplay	      "disp(' LEFT\\n HEART')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		1
+	Name			"<F3o, t3o>"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Left\nHeart"
+	Location		[124, 178, 728, 566]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "in"
+	  Position		  [10, 330, 30, 350]
+	  ForegroundColor	  "blue"
+	  ShowName		  off
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<P2o, t2o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(F3i--F3o)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [240, 237, 250, 288]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "1/C3"
+	  Position		  [255, 106, 320, 124]
+	  ForegroundColor	  "green"
+	  NamePlacement		  "alternate"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "LHeart"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add\nInitial\nCondition"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [310, 254, 320, 296]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "V3"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "F3o & t3o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [515, 308, 520, 372]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F3o, t3o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nAorta"
+	  Position		  [560, 65, 590, 85]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P4"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P3o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nLungs"
+	  Position		  [120, 240, 150, 260]
+	  Orientation		  "left"
+	  ForegroundColor	  "blue"
+	  GotoTag		  "F3i"
+	  TagVisibility		  "scoped"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  Position		  [350, 265, 380, 285]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "V3"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto2"
+	  Position		  [395, 220, 425, 240]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "P3"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto3"
+	  Position		  [130, 315, 160, 335]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "P3i"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:V03"
+	  Position		  [265, 277, 295, 293]
+	  Value			  "V0(3)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [265, 257, 295, 273]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "No Change\nin Temp"
+	  Position		  [270, 339, 300, 371]
+	  Gain			  "1"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "t3o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "P3--P3o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [390, 98, 400, 142]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P3--P3o\n-------------\nR3o"
+	  Position		  [450, 99, 495, 141]
+	  Gain			  "1/Ro(3)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F3o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "P3i & t3i"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [90, 308, 95, 372]
+	  ForegroundColor	  "blue"
+	  BackgroundColor	  "blue"
+	  ShowName		  off
+	  Outputs		  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P3i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "t3i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "P3i--P3"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [115, 88, 125, 157]
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P3i--P3\n-------------\nR3i"
+	  Position		  [175, 103, 220, 147]
+	  Gain			  "1/Ri(3)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F3i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "V3\n----\nC3"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [340, 101, 350, 154]
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "P3"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "aortic\nvalve"
+	  Position		  [415, 109, 435, 131]
+	  NamePlacement		  "alternate"
+	  UpperLimit		  "inf"
+	  LowerLimit		  "0"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "mitral\nvalve"
+	  Position		  [140, 114, 160, 136]
+	  NamePlacement		  "alternate"
+	  UpperLimit		  "inf"
+	  LowerLimit		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out"
+	  Position		  [580, 330, 600, 350]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  Name			  "P3i"
+	  Labels		  [0, 0]
+	  SrcBlock		  "P3i & t3i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Goto3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "P3i--P3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "F3i"
+	  Labels		  [0, 0]
+	  SrcBlock		  "P3i--P3\n-------------\nR3i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 125]
+	    DstBlock		    "Goto\nLungs"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "(F3i--F3o)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "P3i--P3"
+	  SrcPort		  1
+	  DstBlock		  "mitral\nvalve"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "mitral\nvalve"
+	  SrcPort		  1
+	  DstBlock		  "P3i--P3\n-------------\nR3i"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<P2o, t2o>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "in"
+	  SrcPort		  1
+	  DstBlock		  "P3i & t3i"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "V3"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Add\nInitial\nCondition"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Goto1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "V3\n----\nC3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "t3i"
+	  Labels		  [0, 0; -1, 0]
+	  SrcBlock		  "P3i & t3i"
+	  SrcPort		  2
+	  DstBlock		  "No Change\nin Temp"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "(F3i--F3o)"
+	  SrcPort		  1
+	  DstBlock		  "Integrate"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrate"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IC:V03"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "1/C3"
+	  SrcPort		  1
+	  DstBlock		  "V3\n----\nC3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P3--P3o"
+	  SrcPort		  1
+	  DstBlock		  "aortic\nvalve"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "aortic\nvalve"
+	  SrcPort		  1
+	  DstBlock		  "P3--P3o\n-------------\nR3o"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "P3"
+	  SrcBlock		  "V3\n----\nC3"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Points		    [0, 0]
+	    Branch {
+	      Labels		      [-1, 1]
+	      Points		      [0, -55; -260, 0]
+	      DstBlock		      "P3i--P3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [-1, 1]
+	      Points		      [0, 100]
+	      DstBlock		      "Goto2"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Labels		    [1, 1]
+	    DstBlock		    "P3--P3o"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "t3o"
+	  Labels		  [-1, 0; 0, 0]
+	  SrcBlock		  "No Change\nin Temp"
+	  SrcPort		  1
+	  DstBlock		  "F3o & t3o"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "<F3o, t3o>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "F3o & t3o"
+	  SrcPort		  1
+	  DstBlock		  "out"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F3o"
+	  Labels		  [0, 0]
+	  SrcBlock		  "P3--P3o\n-------------\nR3o"
+	  SrcPort		  1
+	  Points		  [0, 205]
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "F3o & t3o"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [-310, 0; 0, -50]
+	    DstBlock		    "(F3i--F3o)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "P3o"
+	  Labels		  [0, 1; 3, 1]
+	  SrcBlock		  "From\nAorta"
+	  SrcPort		  1
+	  Points		  [-185, 0; 0, 35]
+	  DstBlock		  "P3--P3o"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [306, 27]
+	  Text			  " Left Heart "
+	  DropShadow		  on
+	  FontName		  "Bookman Old Style"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [48, 24]
+	  ForegroundColor	  "blue"
+	  Text			  "Connect to\nLungs"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [406, 296]
+	  Text			  "Blood Volume (ml)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [441, 256]
+	  Text			  "Blood Pressure\n(mmHg)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [558, 24]
+	  ForegroundColor	  "red"
+	  Text			  "Connect to\nAorta"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [406, 366]
+	  Text			  "Blood Temp. (K)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Legs"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [365, 241, 405, 279]
+      Orientation	      "left"
+      ForegroundColor	      "blue"
+      BackgroundColor	      "orange"
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('LEGS')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		1
+	Name			"<F8o, f8o>"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Legs"
+	Location		[8, 45, 613, 441]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "in1"
+	  Position		  [15, 227, 30, 243]
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<P4, t4>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(F6i--F6o)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [210, 105, 220, 145]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(P6i--P6)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [100, 95, 110, 135]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(f6i--f6o+f6e--f6d)1"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [270, 226, 285, 319]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++--"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(t6--ta)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [370, 310, 380, 350]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add \nIC2"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [350, 246, 360, 284]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "h8"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add \nIC3"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [280, 95, 290, 135]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "V8"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Ambient Temp\n(deg K)"
+	  Position		  [415, 330, 435, 350]
+	  Orientation		  "left"
+	  BackgroundColor	  "orange"
+	  Value			  "ta"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ta"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F6i x t6i"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [220, 217, 230, 248]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f8i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "F6o & f6o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [530, 175, 535, 250]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F8o, f8o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F6o x t6"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [490, 211, 500, 249]
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f8o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nVena Cava"
+	  Position		  [565, 50, 595, 70]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P9"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P8o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nAorta"
+	  Position		  [130, 217, 160, 233]
+	  Orientation		  "left"
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  GotoTag		  "F8i"
+	  TagVisibility		  "scoped"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto3"
+	  Position		  [325, 160, 355, 180]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "V8"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto4"
+	  Position		  [400, 160, 430, 180]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  GotoTag		  "P8"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto5"
+	  Position		  [100, 216, 130, 234]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  GotoTag		  "P8i"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:V80"
+	  Position		  [235, 97, 265, 113]
+	  NamePlacement		  "alternate"
+	  Value			  "V0(8)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:h80"
+	  Position		  [300, 248, 335, 262]
+	  NamePlacement		  "alternate"
+	  Value			  "h0(8)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate3"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [235, 117, 265, 133]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate4"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [300, 267, 335, 283]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "KA(t8--ta)"
+	  Position		  [300, 310, 350, 350]
+	  Orientation		  "left"
+	  Gain			  "K*A(8)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f8d"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "P6--P6o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [400, 85, 410, 125]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "P6i & t6i"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [75, 217, 80, 248]
+	  ForegroundColor	  "blue"
+	  BackgroundColor	  "blue"
+	  ShowName		  off
+	  Outputs		  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P8i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "t8i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P8--P8o\n-------------\nR8o"
+	  Position		  [425, 85, 470, 125]
+	  Gain			  "1/Ro(8)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F8o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P8i--P8\n-------------\nR8i"
+	  Position		  [125, 95, 170, 135]
+	  Gain			  "1/Ri(8)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F8i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "V8/C8"
+	  Position		  [320, 95, 365, 135]
+	  NamePlacement		  "alternate"
+	  Gain			  "1/C(8)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "P8"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "f6e"
+	  Position		  [195, 252, 230, 268]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  Value			  "fe(8)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "h8/W8"
+	  Position		  [415, 244, 460, 286]
+	  Gain			  "1/W(8)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "t8"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out1"
+	  Position		  [590, 207, 605, 223]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  Name			  "P8i"
+	  SrcBlock		  "P6i & t6i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Goto5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "(P6i--P6)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "t8"
+	  SrcBlock		  "h8/W8"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [0, 55]
+	    DstBlock		    "(t6--ta)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "F6o x t6"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "ta"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Ambient Temp\n(deg K)"
+	  SrcPort		  1
+	  DstBlock		  "(t6--ta)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(t6--ta)"
+	  SrcPort		  1
+	  DstBlock		  "KA(t8--ta)"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f8d"
+	  Labels		  [0, 1; -1, 0]
+	  SrcBlock		  "KA(t8--ta)"
+	  SrcPort		  1
+	  Points		  [-70, 0; 0, -20]
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "F8o"
+	  Labels		  [0, 0]
+	  SrcBlock		  "P8--P8o\n-------------\nR8o"
+	  SrcPort		  1
+	  Points		  [0, 90]
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "F6o x t6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "F6o & f6o"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [3, 0]
+	    Points		    [-290, 0; 0, -60]
+	    DstBlock		    "(F6i--F6o)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "P6--P6o"
+	  SrcPort		  1
+	  DstBlock		  "P8--P8o\n-------------\nR8o"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "P8o"
+	  Labels		  [0, 1; 3, 1]
+	  SrcBlock		  "From\nVena Cava"
+	  SrcPort		  1
+	  Points		  [-180, 0; 0, 35]
+	  DstBlock		  "P6--P6o"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "P8"
+	  Labels		  [0, 0]
+	  SrcBlock		  "V8/C8"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "P6--P6o"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -55]
+	    Branch {
+	      Labels		      [-1, 1]
+	      Points		      [-285, 0]
+	      DstBlock		      "(P6i--P6)"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [2, 1]
+	      Points		      [0, 110]
+	      DstBlock		      "Goto4"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  Name			  "V8"
+	  SrcBlock		  "Add \nIC3"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "V8/C8"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [2, 1]
+	    Points		    [0, 55]
+	    DstBlock		    "Goto3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrate3"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IC:V80"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f8o"
+	  SrcBlock		  "F6o x t6"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "F6o & f6o"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [0, 155; -300, 0; 0, -100]
+	    DstBlock		    "(f6i--f6o+f6e--f6d)1"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  Name			  "<F8o, f8o>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "F6o & f6o"
+	  SrcPort		  1
+	  DstBlock		  "out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IC:h80"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrate4"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC2"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "h8"
+	  Labels		  [1, 1]
+	  SrcBlock		  "Add \nIC2"
+	  SrcPort		  1
+	  DstBlock		  "h8/W8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "f6e"
+	  SrcPort		  1
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "f8i"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "F6i x t6i"
+	  SrcPort		  1
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "(f6i--f6o+f6e--f6d)1"
+	  SrcPort		  1
+	  DstBlock		  "Integrate4"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "t8i"
+	  Labels		  [0, 0; -1, 1]
+	  SrcBlock		  "P6i & t6i"
+	  SrcPort		  2
+	  DstBlock		  "F6i x t6i"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(P6i--P6)"
+	  SrcPort		  1
+	  DstBlock		  "P8i--P8\n-------------\nR8i"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F8i"
+	  SrcBlock		  "P8i--P8\n-------------\nR8i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "(F6i--F6o)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 110]
+	    Branch {
+	      DstBlock		      "Goto\nAorta"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [-1, 1]
+	      DstBlock		      "F6i x t6i"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "(F6i--F6o)"
+	  SrcPort		  1
+	  DstBlock		  "Integrate3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<P4, t4>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "in1"
+	  SrcPort		  1
+	  DstBlock		  "P6i & t6i"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [147, 273]
+	  Text			  "From External \nHeat Sources"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [254, 172]
+	  Text			  " Blood Volume\n(ml)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [286, 53]
+	  Text			  "Blood Pressure (mmHg)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [384, 242]
+	  Text			  "Total\nHeat\n (cal)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [474, 337]
+	  Text			  "Temp\n(K)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [563, 24]
+	  ForegroundColor	  "red"
+	  Text			  "Connect to\nVena Cava"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [321, 22]
+	  Text			  " Legs "
+	  DropShadow		  on
+	  FontName		  "Bookman Old Style"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [48, 24]
+	  ForegroundColor	  "blue"
+	  Text			  "Connect to\nAorta"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Lungs"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [225, 182, 260, 218]
+      ForegroundColor	      "red"
+      BackgroundColor	      "lightBlue"
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('LUNGS')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		1
+	Name			"<P2o, t2o>"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Lungs"
+	Location		[6, 44, 615, 433]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "in"
+	  Position		  [15, 346, 35, 364]
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F1o, t1o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(F2--F2o)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [370, 118, 380, 162]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(F2i--F2)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [55, 129, 65, 171]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(f2i--f2o--f2d)"
+	  Ports			  [3, 1, 0, 0, 0]
+	  Position		  [250, 304, 265, 366]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "--+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add\nInitial\nCondition1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [135, 119, 145, 161]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "V2i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add\nInitial\nCondition2"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [450, 108, 460, 152]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "V2o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add\nInitial\nCondition4"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [335, 304, 350, 346]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "h2"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "F2i & t2i"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [90, 335, 95, 375]
+	  ForegroundColor	  "blue"
+	  BackgroundColor	  "blue"
+	  ShowName		  off
+	  Outputs		  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F2i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "t2i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F2i x t9"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [125, 335, 135, 375]
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f2i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F2o x t2"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [280, 240, 290, 275]
+	  Orientation		  "left"
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "f2o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nLungs"
+	  Position		  [425, 240, 455, 260]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "F3i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F2o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nRight Heart"
+	  Position		  [15, 70, 45, 90]
+	  Orientation		  "left"
+	  ForegroundColor	  "blue"
+	  ShowName		  off
+	  GotoTag		  "P2i"
+	  TagVisibility		  "scoped"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nRight Heart1"
+	  Position		  [570, 70, 600, 90]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "P2o"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nRight Heart2"
+	  Position		  [500, 175, 530, 195]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "V2o"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nRight Heart3"
+	  Position		  [235, 175, 265, 195]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "V2i"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:V2i0"
+	  Position		  [80, 122, 120, 138]
+	  NamePlacement		  "alternate"
+	  Value			  "V0(2)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:V2o0"
+	  Position		  [395, 113, 435, 127]
+	  NamePlacement		  "alternate"
+	  Value			  "V0(10)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:h2i0"
+	  Position		  [285, 307, 320, 323]
+	  NamePlacement		  "alternate"
+	  Value			  "h0(2)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate1"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [80, 143, 120, 157]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate2"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [395, 133, 435, 147]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate3"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [285, 327, 320, 343]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "P2i--P2o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [265, 111, 275, 149]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P2i--P2o\n-------------\nR2i"
+	  Position		  [290, 107, 330, 153]
+	  Gain			  "1/Ri(2)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F2"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "P2o & t2o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [510, 279, 515, 341]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<P2o, t2o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Rate of Heat\nDissipation"
+	  Position		  [150, 327, 180, 343]
+	  BackgroundColor	  "orange"
+	  NamePlacement		  "alternate"
+	  Value			  "fd(2)"
+	  Port {
+	    PortNumber		    1
+	    Name		    "f2d"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "V2i/C2i"
+	  Position		  [180, 119, 225, 161]
+	  Gain			  "1/C(2)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "P2i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "V2o/C2o"
+	  Position		  [495, 108, 540, 152]
+	  Gain			  "1/C(10)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "P2o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "h2/w2"
+	  Position		  [405, 305, 450, 345]
+	  Gain			  "1/W(2)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "t2o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out"
+	  Position		  [575, 300, 595, 320]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  Name			  "V2i"
+	  SrcBlock		  "Add\nInitial\nCondition1"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, 45]
+	    DstBlock		    "Goto\nRight Heart3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "V2i/C2i"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "V2o"
+	  SrcBlock		  "Add\nInitial\nCondition2"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Points		    [0, 55]
+	    DstBlock		    "Goto\nRight Heart2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "V2o/C2o"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "(F2i--F2)"
+	  SrcPort		  1
+	  DstBlock		  "Integrate1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IC:V2i0"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrate1"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "<P2o, t2o>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "P2o & t2o"
+	  SrcPort		  1
+	  DstBlock		  "out"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "t2o"
+	  SrcBlock		  "h2/w2"
+	  SrcPort		  1
+	  Points		  [0, -60]
+	  Branch {
+	    Labels		    [2, 0]
+	    Points		    [0, 60]
+	    DstBlock		    "P2o & t2o"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "F2o x t2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "F2o"
+	  Labels		  [0, 0]
+	  SrcBlock		  "From\nLungs"
+	  SrcPort		  1
+	  Points		  [-75, 0]
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "F2o x t2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [2, 0]
+	    Points		    [0, -100]
+	    DstBlock		    "(F2--F2o)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrate3"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(f2i--f2o--f2d)"
+	  SrcPort		  1
+	  DstBlock		  "Integrate3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "h2"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Add\nInitial\nCondition4"
+	  SrcPort		  1
+	  DstBlock		  "h2/w2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f2i"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "F2i x t9"
+	  SrcPort		  1
+	  DstBlock		  "(f2i--f2o--f2d)"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "f2d"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "Rate of Heat\nDissipation"
+	  SrcPort		  1
+	  DstBlock		  "(f2i--f2o--f2d)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IC:h2i0"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition4"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f2o"
+	  Labels		  [0, 0; -1, 1]
+	  SrcBlock		  "F2o x t2"
+	  SrcPort		  1
+	  Points		  [-65, 0; 0, 55]
+	  DstBlock		  "(f2i--f2o--f2d)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P2i--P2o"
+	  SrcPort		  1
+	  DstBlock		  "P2i--P2o\n-------------\nR2i"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F2"
+	  SrcBlock		  "P2i--P2o\n-------------\nR2i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "(F2--F2o)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [4, 0]
+	    Points		    [0, 70; -305, 0; 0, -40]
+	    DstBlock		    "(F2i--F2)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "P2i"
+	  SrcBlock		  "V2i/C2i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Labels		    [2, 1]
+	    Points		    [0, -60]
+	    DstBlock		    "Goto\nRight Heart"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [1, 1]
+	    DstBlock		    "P2i--P2o"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "(F2--F2o)"
+	  SrcPort		  1
+	  DstBlock		  "Integrate2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IC:V2o0"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrate2"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition2"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "P2o"
+	  Labels		  [0, 1]
+	  SrcBlock		  "V2o/C2o"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, -50]
+	    Branch {
+	      DstBlock		      "Goto\nRight Heart1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [3, 1]
+	      Points		      [-305, 0; 0, 40]
+	      DstBlock		      "P2i--P2o"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    Points		    [0, 115; -50, 0]
+	    DstBlock		    "P2o & t2o"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "<F1o, t1o>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "in"
+	  SrcPort		  1
+	  DstBlock		  "F2i & t2i"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F2i"
+	  SrcBlock		  "F2i & t2i"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 1]
+	    DstBlock		    "F2i x t9"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    Points		    [0, -85; -85, 0; 0, -120]
+	    DstBlock		    "(F2i--F2)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "t2i"
+	  Labels		  [1, 1]
+	  SrcBlock		  "F2i & t2i"
+	  SrcPort		  2
+	  DstBlock		  "F2i x t9"
+	  DstPort		  2
+	}
+	Annotation {
+	  Position		  [48, 24]
+	  ForegroundColor	  "blue"
+	  Text			  "Connect to\nRight Heart"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [563, 24]
+	  ForegroundColor	  "red"
+	  Text			  "Connect to\nLeft Heart"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [480, 349]
+	  Text			  "Blood\nTemp. \n(K)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [375, 350]
+	  Text			  "Total\nHeat\n(cal)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [145, 210]
+	  Text			  "Blood Flow (ml/sec)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [311, 27]
+	  Text			  " Lungs "
+	  DropShadow		  on
+	  FontName		  "Bookman Old Style"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Right\nHeart"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [135, 182, 170, 218]
+      ForegroundColor	      "blue"
+      BackgroundColor	      "red"
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      ShowPortLabels	      on
+      MaskDisplay	      "disp(' RIGHT\\n HEART')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		1
+	Name			"<F1o, t1o>"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Right\nHeart"
+	Location		[131, 178, 733, 565]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "in1"
+	  Position		  [15, 317, 30, 333]
+	  ForegroundColor	  "blue"
+	  ShowName		  off
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<P9, t9>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(F3i--F3o)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [240, 222, 250, 273]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "1/C1"
+	  Position		  [255, 91, 320, 109]
+	  ForegroundColor	  "green"
+	  NamePlacement		  "alternate"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "RHeart"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add\nInitial\nCondition1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [310, 239, 320, 281]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "V1"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "F3o & t3o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [515, 293, 520, 357]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F1o, t1o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nLungs"
+	  Position		  [560, 50, 590, 70]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P2i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P1o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nVena Cava"
+	  Position		  [130, 225, 160, 245]
+	  Orientation		  "left"
+	  ForegroundColor	  "blue"
+	  GotoTag		  "F1i"
+	  TagVisibility		  "scoped"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto3"
+	  Position		  [350, 250, 380, 270]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "V1"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto4"
+	  Position		  [395, 205, 425, 225]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "P1"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:V01"
+	  Position		  [265, 262, 295, 278]
+	  Value			  "V0(1)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate1"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [265, 242, 295, 258]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "No Change\nin Temp"
+	  Position		  [270, 324, 300, 356]
+	  Gain			  "1"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "t1o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P1--P1o\n-------------\nR1o"
+	  Position		  [450, 84, 495, 126]
+	  Gain			  "1/Ro(1)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F1o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "P1i"
+	  Position		  [135, 300, 165, 320]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "P1i"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "P1i--P1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [115, 73, 125, 142]
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P1i--P1\n-------------\nR1i"
+	  Position		  [175, 88, 220, 132]
+	  Gain			  "1/Ri(1)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F1i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "P3--P3o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [390, 83, 400, 127]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "P3i & t3i"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [90, 293, 95, 357]
+	  ForegroundColor	  "blue"
+	  BackgroundColor	  "blue"
+	  ShowName		  off
+	  Outputs		  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P1i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "t1i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "V1\n----\nC1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [340, 86, 350, 139]
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "P1"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "pulmonary\nvalve"
+	  Position		  [415, 94, 435, 116]
+	  NamePlacement		  "alternate"
+	  UpperLimit		  "inf"
+	  LowerLimit		  "0"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "tricuspid\nvalve"
+	  Position		  [140, 99, 160, 121]
+	  NamePlacement		  "alternate"
+	  UpperLimit		  "inf"
+	  LowerLimit		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out1"
+	  Position		  [580, 317, 595, 333]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  Name			  "P1i"
+	  SrcBlock		  "P3i & t3i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "P1i"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "P1i--P1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "F1i"
+	  Labels		  [0, 1]
+	  SrcBlock		  "P1i--P1\n-------------\nR1i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 125]
+	    DstBlock		    "Goto\nVena Cava"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "(F3i--F3o)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "P1i--P1"
+	  SrcPort		  1
+	  DstBlock		  "tricuspid\nvalve"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "tricuspid\nvalve"
+	  SrcPort		  1
+	  DstBlock		  "P1i--P1\n-------------\nR1i"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<P9, t9>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "in1"
+	  SrcPort		  1
+	  DstBlock		  "P3i & t3i"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "V1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Add\nInitial\nCondition1"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Goto3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "V1\n----\nC1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "t1i"
+	  Labels		  [0, 0; -1, 0]
+	  SrcBlock		  "P3i & t3i"
+	  SrcPort		  2
+	  DstBlock		  "No Change\nin Temp"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "(F3i--F3o)"
+	  SrcPort		  1
+	  DstBlock		  "Integrate1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrate1"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IC:V01"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "1/C1"
+	  SrcPort		  1
+	  DstBlock		  "V1\n----\nC1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P3--P3o"
+	  SrcPort		  1
+	  DstBlock		  "pulmonary\nvalve"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "pulmonary\nvalve"
+	  SrcPort		  1
+	  DstBlock		  "P1--P1o\n-------------\nR1o"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "P1"
+	  SrcBlock		  "V1\n----\nC1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Points		    [0, 0]
+	    Branch {
+	      Labels		      [-1, 1]
+	      Points		      [0, -55; -260, 0]
+	      DstBlock		      "P1i--P1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [-1, 1]
+	      Points		      [0, 100]
+	      DstBlock		      "Goto4"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Labels		    [1, 1]
+	    DstBlock		    "P3--P3o"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "t1o"
+	  Labels		  [-1, 0; 0, 0]
+	  SrcBlock		  "No Change\nin Temp"
+	  SrcPort		  1
+	  DstBlock		  "F3o & t3o"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "<F1o, t1o>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "F3o & t3o"
+	  SrcPort		  1
+	  DstBlock		  "out1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F1o"
+	  Labels		  [0, 0]
+	  SrcBlock		  "P1--P1o\n-------------\nR1o"
+	  SrcPort		  1
+	  Points		  [0, 205]
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "F3o & t3o"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [-310, 0; 0, -50]
+	    DstBlock		    "(F3i--F3o)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "P1o"
+	  Labels		  [0, 1; 3, 1]
+	  SrcBlock		  "From\nLungs"
+	  SrcPort		  1
+	  Points		  [-185, 0; 0, 35]
+	  DstBlock		  "P3--P3o"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [406, 281]
+	  Text			  "Blood Volume (ml)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [441, 241]
+	  Text			  "Blood Pressure\n(mmHg)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [406, 351]
+	  Text			  "Blood Temp. (K)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [558, 24]
+	  ForegroundColor	  "red"
+	  Text			  "Connect to\nLungs"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [43, 24]
+	  ForegroundColor	  "blue"
+	  Text			  "Connect to\nVena Cava"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [311, 22]
+	  Text			  " Right Heart "
+	  DropShadow		  on
+	  FontName		  "Bookman Old Style"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Trunk"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [210, 272, 250, 308]
+      Orientation	      "left"
+      ForegroundColor	      "blue"
+      BackgroundColor	      "orange"
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('TRUNK')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		1
+	Name			"<F7o, f7o>"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Trunk"
+	Location		[8, 44, 615, 443]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "in"
+	  Position		  [15, 232, 30, 248]
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<P4, t4>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(F6i--F6o)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [210, 110, 220, 150]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(P6i--P6)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [100, 100, 110, 140]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(f6i--f6o+f6e--f6d)1"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [270, 231, 285, 324]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++--"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(t6--ta)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [370, 315, 380, 355]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add \nIC"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [350, 251, 360, 289]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "h7"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add \nIC1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [280, 100, 290, 140]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "V7"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Ambient Temp\n(deg K)"
+	  Position		  [415, 335, 435, 355]
+	  Orientation		  "left"
+	  BackgroundColor	  "orange"
+	  Value			  "ta"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ta"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F6i x t6i"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [220, 222, 230, 253]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f7i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "F6o & f6o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [530, 180, 535, 255]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F7o, f7o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F6o x t6"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [490, 216, 500, 254]
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f7o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From\nVena Cava"
+	  Position		  [565, 55, 595, 75]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "P9"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P7o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nAorta"
+	  Position		  [130, 222, 160, 238]
+	  Orientation		  "left"
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  GotoTag		  "F7i"
+	  TagVisibility		  "scoped"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  Position		  [325, 165, 355, 185]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "V7"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto2"
+	  Position		  [395, 165, 425, 185]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "P7"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto3"
+	  Position		  [100, 221, 130, 239]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  GotoTag		  "P7i"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:V70"
+	  Position		  [235, 102, 265, 118]
+	  NamePlacement		  "alternate"
+	  Value			  "V0(7)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "IC:h70"
+	  Position		  [300, 252, 335, 268]
+	  NamePlacement		  "alternate"
+	  Value			  "h0(7)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate1"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [235, 122, 265, 138]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate2"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [300, 272, 335, 288]
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "KA(t7--ta)"
+	  Position		  [300, 315, 350, 355]
+	  Orientation		  "left"
+	  Gain			  "K*A(7)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f7d"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "P6--P6o"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [400, 90, 410, 130]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "P6i & t6i"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [75, 220, 80, 255]
+	  ForegroundColor	  "blue"
+	  BackgroundColor	  "blue"
+	  ShowName		  off
+	  Outputs		  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "P7i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "t7i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P7--P7o\n-------------\nR7o"
+	  Position		  [425, 90, 470, 130]
+	  Gain			  "1/Ro(7)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F7o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "P7i--P7\n-------------\nR7i"
+	  Position		  [125, 100, 170, 140]
+	  Gain			  "1/Ri(7)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F7i"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "V7/C7"
+	  Position		  [320, 100, 365, 140]
+	  NamePlacement		  "alternate"
+	  Gain			  "1/C(7)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "P7"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "f6e"
+	  Position		  [195, 257, 230, 273]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  Value			  "fe(7)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "fe7"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "h7/W7"
+	  Position		  [415, 249, 460, 291]
+	  Gain			  "1/W(7)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "t7"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out"
+	  Position		  [590, 212, 605, 228]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  Name			  "P7i"
+	  SrcBlock		  "P6i & t6i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Goto3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "(P6i--P6)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "t7"
+	  SrcBlock		  "h7/W7"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [0, 55]
+	    DstBlock		    "(t6--ta)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "F6o x t6"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "ta"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Ambient Temp\n(deg K)"
+	  SrcPort		  1
+	  DstBlock		  "(t6--ta)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(t6--ta)"
+	  SrcPort		  1
+	  DstBlock		  "KA(t7--ta)"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f7d"
+	  Labels		  [0, 1; -1, 0]
+	  SrcBlock		  "KA(t7--ta)"
+	  SrcPort		  1
+	  Points		  [-70, 0; 0, -20]
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "F7o"
+	  Labels		  [0, 0]
+	  SrcBlock		  "P7--P7o\n-------------\nR7o"
+	  SrcPort		  1
+	  Points		  [0, 90]
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "F6o x t6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "F6o & f6o"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [3, 0]
+	    Points		    [-290, 0; 0, -60]
+	    DstBlock		    "(F6i--F6o)"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "P6--P6o"
+	  SrcPort		  1
+	  DstBlock		  "P7--P7o\n-------------\nR7o"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "P7o"
+	  Labels		  [0, 1; 3, 1]
+	  SrcBlock		  "From\nVena Cava"
+	  SrcPort		  1
+	  Points		  [-180, 0; 0, 35]
+	  DstBlock		  "P6--P6o"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "P7"
+	  Labels		  [0, 0]
+	  SrcBlock		  "V7/C7"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "P6--P6o"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -55]
+	    Branch {
+	      Labels		      [-1, 1]
+	      Points		      [-285, 0]
+	      DstBlock		      "(P6i--P6)"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [2, 1]
+	      Points		      [0, 110]
+	      DstBlock		      "Goto2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  Name			  "V7"
+	  SrcBlock		  "Add \nIC1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "V7/C7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [2, 1]
+	    Points		    [0, 55]
+	    DstBlock		    "Goto1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrate1"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IC:V70"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f7o"
+	  SrcBlock		  "F6o x t6"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "F6o & f6o"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [-1, 0]
+	    Points		    [0, 155; -300, 0; 0, -100]
+	    DstBlock		    "(f6i--f6o+f6e--f6d)1"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  Name			  "<F7o, f7o>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "F6o & f6o"
+	  SrcPort		  1
+	  DstBlock		  "out"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IC:h70"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrate2"
+	  SrcPort		  1
+	  DstBlock		  "Add \nIC"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "h7"
+	  Labels		  [1, 1]
+	  SrcBlock		  "Add \nIC"
+	  SrcPort		  1
+	  DstBlock		  "h7/W7"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "fe7"
+	  Labels		  [1, 1]
+	  SrcBlock		  "f6e"
+	  SrcPort		  1
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "f7i"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "F6i x t6i"
+	  SrcPort		  1
+	  DstBlock		  "(f6i--f6o+f6e--f6d)1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "(f6i--f6o+f6e--f6d)1"
+	  SrcPort		  1
+	  DstBlock		  "Integrate2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "t7i"
+	  Labels		  [0, 0; -1, 1]
+	  SrcBlock		  "P6i & t6i"
+	  SrcPort		  2
+	  DstBlock		  "F6i x t6i"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "(P6i--P6)"
+	  SrcPort		  1
+	  DstBlock		  "P7i--P7\n-------------\nR7i"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F7i"
+	  SrcBlock		  "P7i--P7\n-------------\nR7i"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "(F6i--F6o)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 110]
+	    Branch {
+	      DstBlock		      "Goto\nAorta"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [-1, 1]
+	      DstBlock		      "F6i x t6i"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "(F6i--F6o)"
+	  SrcPort		  1
+	  DstBlock		  "Integrate1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<P4, t4>"
+	  Labels		  [1, 1]
+	  SrcBlock		  "in"
+	  SrcPort		  1
+	  DstBlock		  "P6i & t6i"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [147, 278]
+	  Text			  "From External \nHeat Sources"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [254, 177]
+	  Text			  " Blood Volume\n(ml)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [286, 58]
+	  Text			  "Blood Pressure (mmHg)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [384, 247]
+	  Text			  "Total\nHeat\n (cal)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [474, 342]
+	  Text			  "Temp\n(K)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [563, 24]
+	  ForegroundColor	  "red"
+	  Text			  "Connect to\nVena Cava"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [311, 22]
+	  Text			  " Trunk "
+	  DropShadow		  on
+	  FontName		  "Bookman Old Style"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [48, 24]
+	  ForegroundColor	  "blue"
+	  Text			  "Connect to\nAorta"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Vena\nCava"
+      Ports		      [4, 1, 0, 0, 0]
+      Position		      [50, 163, 85, 232]
+      ForegroundColor	      "blue"
+      BackgroundColor	      "red"
+      ShowName		      off
+      FontName		      "Geneva"
+      FontSize		      9
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('VENA\\nCAVA')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		1
+	Name			"<P9, t9>"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Vena\nCava"
+	Location		[18, 86, 593, 451]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "in"
+	  Position		  [15, 177, 35, 193]
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F5o, f5o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "in1"
+	  Position		  [15, 197, 35, 213]
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F6o, f6o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "in2"
+	  Position		  [15, 217, 35, 233]
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "3"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F7o, f7o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "in3"
+	  Position		  [15, 237, 35, 253]
+	  ForegroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "4"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "<F8o, f8o>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(F5o+F6o+F7o+F8o--F9o)1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [280, 135, 295, 175]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "-+"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(f5o+f6o+f7o+f8o--f9o)1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [275, 251, 290, 284]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add\nInitial\nCondition3"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [360, 145, 375, 185]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "v9"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add\nInitial\nCondition4"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [355, 259, 370, 301]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "h9"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "F1i"
+	  Position		  [520, 335, 560, 355]
+	  Orientation		  "left"
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "F1i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "F9o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "F1i1"
+	  Position		  [220, 135, 260, 155]
+	  ForegroundColor	  "red"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "F1i"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "F9o x t9"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [415, 323, 425, 352]
+	  Orientation		  "left"
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "f9o"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto\nSystemic System"
+	  Position		  [30, 72, 75, 88]
+	  Orientation		  "left"
+	  ForegroundColor	  "blue"
+	  GotoTag		  "P9"
+	  TagVisibility		  "scoped"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  Position		  [425, 125, 455, 145]
+	  ForegroundColor	  "white"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  GotoTag		  "V9"
+	  TagVisibility		  "global"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Inputs"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [100, 170, 105, 260]
+	  ForegroundColor	  "blue"
+	  BackgroundColor	  "blue"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Inputs		  "4"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate3"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [310, 149, 345, 161]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrate4"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [305, 264, 340, 276]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "P9 & t9"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [485, 112, 490, 323]
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "none"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<P9, t9>"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Pick\nBlood Flow"
+	  Position		  [130, 124, 155, 206]
+	  NamePlacement		  "alternate"
+	  Elements		  "[1,3,5,7]"
+	  InputPortWidth	  "8"
+	  Port {
+	    PortNumber		    1
+	    Name		    "{F}"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Pick\nHeat flow"
+	  Position		  [130, 219, 155, 301]
+	  Elements		  "[2,4,6,8]"
+	  InputPortWidth	  "8"
+	  Port {
+	    PortNumber		    1
+	    Name		    "{f}"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "V9 IC"
+	  Position		  [310, 168, 345, 182]
+	  Value			  "V0(9)"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "V9/C9"
+	  Position		  [415, 148, 455, 182]
+	  Gain			  "1/C(9)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "P9"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "_1_\n V9"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [374, 205, 396, 235]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Operator		  "reciprocal"
+	  OutputSignalType	  "auto"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "1/v9"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "h9\n------\nV9"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [420, 248, 430, 292]
+	  ShowName		  off
+	  Inputs		  "2"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "t9"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "h9 IC"
+	  Position		  [305, 283, 340, 297]
+	  Value			  "h0(9)"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "sum  all"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [185, 249, 205, 271]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "1"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "f5+f6+f7+f8"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "sum all"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [185, 154, 205, 176]
+	  ShowName		  off
+	  IconShape		  "rectangular"
+	  Inputs		  "1"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "F5+F6+F7+F8"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out"
+	  Position		  [545, 210, 565, 230]
+	  ForegroundColor	  "red"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  Name			  "v9"
+	  SrcBlock		  "Add\nInitial\nCondition3"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "V9/C9"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    DstBlock		    "_1_\n V9"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -30]
+	    DstBlock		    "Goto1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Inputs"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Pick\nHeat flow"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Pick\nBlood Flow"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "F9o"
+	  Labels		  [0, 1; -1, 1]
+	  SrcBlock		  "F1i"
+	  SrcPort		  1
+	  DstBlock		  "F9o x t9"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "F1i1"
+	  SrcPort		  1
+	  DstBlock		  "(F5o+F6o+F7o+F8o--F9o)1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "F5+F6+F7+F8"
+	  Labels		  [0, 0]
+	  SrcBlock		  "sum all"
+	  SrcPort		  1
+	  DstBlock		  "(F5o+F6o+F7o+F8o--F9o)1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "{F}"
+	  Labels		  [1, 1]
+	  SrcBlock		  "Pick\nBlood Flow"
+	  SrcPort		  1
+	  DstBlock		  "sum all"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f5+f6+f7+f8"
+	  Labels		  [0, 1]
+	  SrcBlock		  "sum  all"
+	  SrcPort		  1
+	  DstBlock		  "(f5o+f6o+f7o+f8o--f9o)1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "{f}"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Pick\nHeat flow"
+	  SrcPort		  1
+	  DstBlock		  "sum  all"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "t9"
+	  Labels		  [0, 0]
+	  SrcBlock		  "h9\n------\nV9"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Labels		    [2, 0]
+	    Points		    [0, 60]
+	    DstBlock		    "F9o x t9"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [1, 1]
+	    DstBlock		    "P9 & t9"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "(f5o+f6o+f7o+f8o--f9o)1"
+	  SrcPort		  1
+	  DstBlock		  "Integrate4"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<F8o, f8o>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "in3"
+	  SrcPort		  1
+	  DstBlock		  "Inputs"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "<F7o, f7o>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "in2"
+	  SrcPort		  1
+	  DstBlock		  "Inputs"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "<F6o, f6o>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "in1"
+	  SrcPort		  1
+	  DstBlock		  "Inputs"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "<F5o, f5o>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "in"
+	  SrcPort		  1
+	  DstBlock		  "Inputs"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "(F5o+F6o+F7o+F8o--F9o)1"
+	  SrcPort		  1
+	  DstBlock		  "Integrate3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<P9, t9>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "P9 & t9"
+	  SrcPort		  1
+	  DstBlock		  "out"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "P9"
+	  SrcBlock		  "V9/C9"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "P9 & t9"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -85]
+	    DstBlock		    "Goto\nSystemic System"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrate4"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "h9 IC"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Integrate3"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "V9 IC"
+	  SrcPort		  1
+	  DstBlock		  "Add\nInitial\nCondition3"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "h9"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "Add\nInitial\nCondition4"
+	  SrcPort		  1
+	  DstBlock		  "h9\n------\nV9"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "1/v9"
+	  Labels		  [1, 0]
+	  SrcBlock		  "_1_\n V9"
+	  SrcPort		  1
+	  Points		  [0, 20]
+	  DstBlock		  "h9\n------\nV9"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "f9o"
+	  Labels		  [0, 1; -1, 0]
+	  SrcBlock		  "F9o x t9"
+	  SrcPort		  1
+	  Points		  [-175, 0; 0, -65]
+	  DstBlock		  "(f5o+f6o+f7o+f8o--f9o)1"
+	  DstPort		  2
+	}
+	Annotation {
+	  Position		  [390, 303]
+	  Text			  "Total\nHeat \n(cal)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [296, 22]
+	  Text			  " Vena Cava "
+	  DropShadow		  on
+	  FontName		  "Bookman Old Style"
+	  FontSize		  16
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [393, 71]
+	  Text			  "Blood Pressure (mmHg)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [455, 245]
+	  Text			  "Blood\nTemp.\n(K)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [395, 113]
+	  Text			  "Blood\n Volume\n(ml)"
+	  FontName		  "Bookman Old Style"
+	  FontWeight		  "bold"
+	}
+	Annotation {
+	  Position		  [523, 24]
+	  ForegroundColor	  "red"
+	  Text			  "Connect to\nRight Heart"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [63, 24]
+	  ForegroundColor	  "blue"
+	  Text			  "Connect to\nSystemic System"
+	  FontName		  "Bookman Old Style"
+	  FontSize		  12
+	  FontWeight		  "light"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Line {
+      Name		      "<F5o, f5o>"
+      Labels		      [0, 0]
+      SrcBlock		      "Arms"
+      SrcPort		      1
+      Points		      [-325, 0]
+      DstBlock		      "Vena\nCava"
+      DstPort		      1
+    }
+    Line {
+      Name		      "<F6o, f6o>"
+      Labels		      [0, 0]
+      SrcBlock		      "Head"
+      SrcPort		      1
+      Points		      [-185, 0; 0, 80]
+      DstBlock		      "Vena\nCava"
+      DstPort		      2
+    }
+    Line {
+      Name		      "<P4, t4>"
+      SrcBlock		      "Aorta"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	Points			[0, 60]
+	Branch {
+	  Labels		  [-1, 0]
+	  DstBlock		  "Legs"
+	  DstPort		  1
+	}
+	Branch {
+	  Labels		  [-1, 0]
+	  Points		  [0, 30]
+	  DstBlock		  "Trunk"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[0, -60]
+	Branch {
+	  Labels		  [-1, 0]
+	  DstBlock		  "Arms"
+	  DstPort		  1
+	}
+	Branch {
+	  Labels		  [-1, 0]
+	  Points		  [0, -30]
+	  DstBlock		  "Head"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      Name		      "<P2o, t2o>"
+      Labels		      [1, 0]
+      SrcBlock		      "Lungs"
+      SrcPort		      1
+      DstBlock		      "Left\nHeart"
+      DstPort		      1
+    }
+    Line {
+      Name		      "<F1o, t1o>"
+      Labels		      [1, 0]
+      SrcBlock		      "Right\nHeart"
+      SrcPort		      1
+      DstBlock		      "Lungs"
+      DstPort		      1
+    }
+    Line {
+      Name		      "<P9, t9>"
+      Labels		      [1, 0]
+      SrcBlock		      "Vena\nCava"
+      SrcPort		      1
+      DstBlock		      "Right\nHeart"
+      DstPort		      1
+    }
+    Line {
+      Name		      "<F3o, t3o>"
+      Labels		      [1, 0]
+      SrcBlock		      "Left\nHeart"
+      SrcPort		      1
+      DstBlock		      "Aorta"
+      DstPort		      1
+    }
+    Line {
+      Name		      "<F8o, f8o>"
+      Labels		      [0, 0]
+      SrcBlock		      "Legs"
+      SrcPort		      1
+      Points		      [-325, 0]
+      DstBlock		      "Vena\nCava"
+      DstPort		      4
+    }
+    Line {
+      Name		      "<F7o, f7o>"
+      Labels		      [0, 0]
+      SrcBlock		      "Trunk"
+      SrcPort		      1
+      Points		      [-185, 0; 0, -85]
+      DstBlock		      "Vena\nCava"
+      DstPort		      3
+    }
+    Annotation {
+      Position		      [401, 13]
+      Text		      "Scoped Variables"
+      FontName		      "Geneva"
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Position		      [126, 37]
+      Text		      "PHYSBE\n The Circulatory System "
+      DropShadow	      on
+      FontName		      "Times"
+      FontSize		      18
+      FontWeight	      "bold"
+    }
+  }
+}
